@@ -1,0 +1,144 @@
+@use "../global/breakpoint" as m;
+
+.p-company__fv {
+  background: url("../img/company/company_fv.jpg") no-repeat center;
+  background-size: cover !important;
+  height: 220px;
+  position: relative;
+  width: 100%;
+
+  .p-company__fv-inner {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.56) repeat;
+  }
+
+  .p-company__fv-title {
+    color: #fff;
+    font-size: 2.5vw;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    @include m.mq(sp) {
+      font-size: 28px;
+    }
+  }
+}
+
+.p-company__inner {
+  padding: 5vw 0;
+  @include m.mq(sp) {
+    padding: 48px 16px;
+  }
+
+  .p-company__philosophy {
+    text-align: center;
+
+    .p-company__philosophy-text {
+      font-size: 1.3vw;
+      font-weight: bold;
+      margin-top: 1.75vw;
+      @include m.mq(sp) {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-top: 16px;
+      }
+    }
+
+    .p-company__philosophy-list {
+      align-items: center;
+      display: flex;
+      gap: 5vw;
+      justify-content: center;
+      margin: 3.5vw auto 0;
+      width: 80%;
+      @include m.mq(sp) {
+        flex-direction: column;
+        gap: 24px;
+        margin: 32px auto 0;
+        width: 100%;
+      }
+
+      li {
+        background-color: #f6fafc;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        height: 18vw;
+        justify-content: center;
+        width: calc((100% - 25vw) / 3);
+        @include m.mq(sp) {
+          height: 250px;
+          width: 250px;
+        }
+      }
+
+      .p-company__philosophy-title {
+        color: #0072ad;
+        font-size: 2vw;
+        font-weight: bold;
+        @include m.mq(sp) {
+          font-size: 24px;
+        }
+      }
+
+      .p-company__philosophy-subtitle {
+        font-size: 1vw;
+        font-weight: bold;
+        margin-top: 0.4vw;
+        @include m.mq(sp) {
+          font-size: 18px;
+          margin-top: 8px;
+        }
+      }
+
+      .p-company__philosophy-item-text {
+        font-size: 1.1vw;
+        margin-top: 1.2vw;
+        @include m.mq(sp) {
+          font-size: 14px;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  .p-company__profile {
+    margin-top: 8vw;
+    @include m.mq(sp) {
+      margin-top: 64px;
+    }
+
+    .p-company__profile-table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      font-size: 1.1vw;
+      margin: 2.5vw auto 0;
+      text-align: left;
+      width: 55%;
+      @include m.mq(sp) {
+        font-size: 14px;
+        margin: 24px auto 0;
+        width: 100%;
+      }
+
+      tr {
+        border-bottom: 1px solid #828282;
+
+        th {
+          font-weight: bold;
+          width: 23%;
+          padding: 4%;
+          text-align: left;
+        }
+
+        td {
+          padding: 4%;
+          word-break: break-all;
+          background: #fff;
+        }
+      }
+    }
+  }
+}

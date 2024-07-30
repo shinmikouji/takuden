@@ -1,0 +1,22 @@
+@charset "UTF-8";
+// foundation
+@use "../scss/foundation/base";
+@use "../scss/foundation/reset";
+@use "../scss/foundation/animation";
+
+// layout
+@use "../scss/layout/l-header";
+@use "../scss/layout/l-footer";
+
+// object
+@use "../scss/object/c-contactArea";
+@use "../scss/object/c-display";
+@use "../scss/object/c-section-title";
+
+// pages
+@use "../scss/pages/p-achievement";
+@use "../scss/pages/p-business";
+@use "../scss/pages/p-company";
+@use "../scss/pages/p-contact";
+@use "../scss/pages/p-recruit";
+@use "../scss/pages/p-top";

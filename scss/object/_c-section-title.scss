@@ -1,0 +1,42 @@
+@use "../global/breakpoint" as m;
+
+.c-section__title {
+  color: #1a2f53;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 0.6vw;
+  position: relative;
+
+  &:after {
+    background: #07c1d0;
+    bottom: 0;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    width: 4vw;
+  }
+
+  @include m.mq(sp) {
+    font-size: 24px;
+    padding-bottom: 14px;
+
+    &:after {
+      height: 3px;
+      width: 50px;
+    }
+  }
+}
+
+.c-section__subtitle {
+  color: #0072ad;
+  font-size: 2vw;
+  font-weight: bold;
+  text-align: center;
+  @include m.mq(sp) {
+    font-size: 20px;
+  }
+}

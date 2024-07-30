@@ -1,0 +1,175 @@
+@use "../global/breakpoint" as m;
+
+.p-achievement {
+  background: #F6FAFC;
+  padding: 5.5vw 0;
+  @include m.mq(sp) {
+    padding: 48px 16px;
+  }
+
+  .p-achievement__titleArea {
+    .p-achievement__text {
+      line-height: 2;
+      margin-top: 2vw;
+      text-align: center;
+      @include m.mq(sp) {
+        font-size: 14px;
+        margin-top: 16px;
+      }
+    }
+  }
+
+  .p-achievement__list {
+    display: grid;
+    gap: 2.5vw;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5.5vw auto 0;
+    width: 80%;
+    @include m.mq(sp) {
+      gap: 24px;
+      grid-template-columns: 1fr;
+      margin: 0;
+      padding: 32px 48px;
+      width: 100%;
+    }
+
+    .p-achievement__items-thumbnail {
+      height: 18vw;
+      vertical-align: bottom;
+      @include m.mq(sp) {
+        height: 180px;
+        object-fit: cover;
+      }
+    }
+
+    .p-achievement__items-date {
+      display: block;
+      font-size: 1vw;
+      margin-top: 1vw;
+      @include m.mq(sp) {
+        font-size: 14px;
+        margin-top: 12px;
+      }
+    }
+
+    .p-achievement__items-title {
+      color: #1A2F53;
+      font-size: 1.2vw;
+      font-weight: bold;
+      margin-top: 0.4vw;
+      @include m.mq(sp) {
+        font-size: 18px;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+// 詳細ページのスタイル
+.p-single-achievement__head {
+  align-items: center;
+  background: #F6FAFC;
+  display: flex;
+  justify-content: center;
+  padding: 5.5vw 0;
+  width: 100%;
+  @include m.mq(sp) {
+    padding: 48px 0;
+  }
+}
+
+.p-single-achievement__inner {
+  margin: 0 auto;
+  padding: 5.5vw 0;
+  width: 80%;
+  @include m.mq(sp) {
+    padding: 48px 16px;
+    width: 100%;
+  }
+
+  .p-single-achievement__image {
+    display: block;
+    height: 40vw;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 80%;
+    @include m.mq(sp) {
+      height: 300px;
+      width: 95%;
+    }
+  }
+
+  .p-single-achievement__time {
+    display: block;
+    font-size: 1.1vw;
+    margin-top: 3vw;
+
+    @include m.mq(sp) {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-top: 16px;
+    }
+  }
+
+  .p-single-achievement__title {
+    border-bottom: 2px solid #0072AD;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 1.9vw;
+    font-weight: bold;
+    margin-top: 0.55vw;
+    padding-bottom: 1.5vw;
+
+    @include m.mq(sp) {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 8px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .p-single-achievement__text {
+    font-size: 1.25vw;
+    margin-top: 1.5vw;
+
+    @include m.mq(sp) {
+      font-size: 16px;
+      line-height: 2;
+      margin-top: 20px;
+    }
+
+    figure {
+      margin-top: 40px;
+      @include m.mq(sp) {
+        margin-top: 32px;
+      }
+    }
+
+    p:not(:first-of-type) {
+      margin-top: 16px;
+    }
+  }
+
+  .p-single-achievement__button {
+    background: #fff;
+    border: 1px solid #0072AD;
+    border-radius: 28px;
+    color: #0072AD;
+    display: block;
+    font-size: 1.1vw;
+    font-weight: bold;
+    line-height: 1;
+    margin: 8vw auto 0;
+    padding: 1.3vw 0;
+    text-align: center;
+    width: 16.4vw;
+
+    @include m.mq(sp) {
+      font-size: 16px;
+      margin-top: 70px;
+      padding: 20px 0;
+      width: 240px;
+    }
+  }
+}

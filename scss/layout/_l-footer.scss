@@ -1,0 +1,76 @@
+@use "../global/breakpoint" as m;
+
+.l-footer {
+  background-color: #1398ae;
+  padding: 5.5vw 0;
+
+  @include m.mq(sp) {
+    padding: 48px 16px;
+  }
+
+  .l-footer__inner {
+    color: #fff;
+    margin: 0 auto;
+    width: 80%;
+
+    @include m.mq(sp) {
+      width: 100%;
+    }
+  }
+
+  .l-footer-top__list {
+    align-items: center;
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+
+    @include m.mq(sp) {
+      flex-direction: column;
+    }
+
+    li {
+      align-items: center;
+      display: grid;
+      font-size: 0.9vw;
+      gap: 0.7vw;
+      grid-template-columns: max-content 1fr;
+
+      @include m.mq(sp) {
+        font-size: 14px;
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      img {
+        width: 2.5vw;
+        @include m.mq(sp) {
+          width: 30px;
+        }
+      }
+    }
+  }
+
+  .l-footer__text--main {
+    font-size: 1.6vw;
+    font-weight: bold;
+    margin-top: 2vw;
+    text-align: center;
+
+    @include m.mq(sp) {
+      font-size: 18px;
+      margin-top: 32px;
+    }
+  }
+
+  .l-footer__text--sub {
+    font-size: 1.1vw;
+    margin-top: 1.5vw;
+    text-align: center;
+
+    @include m.mq(sp) {
+      font-size: 14px;
+      line-height: 2;
+      margin-top: 18px;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@use "../global/breakpoint" as m;
+
+.l-header {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 3.5vw;
+  width: 100%;
+  z-index: 99;
+
+  .l-header__title {
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: "Yuji Syuku", serif;
+
+    @include m.mq(sp) {
+      font-size: 24px;
+    }
+  }
+
+  nav ul {
+    align-items: center;
+    display: flex;
+    font-size: 1vw;
+    font-weight: bold;
+    gap: 3vw;
+  }
+
+  .l-header__buttonArea {
+    display: flex;
+    gap: 1.5vw;
+  }
+
+  .l-header__button {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    gap: 0.75vw;
+    padding: 0.5vw 1vw;
+
+    img {
+      width: 1.75vw;
+    }
+  }
+
+  .l-header__button.lightblue {
+    background-color: #07c1d0;
+  }
+
+  .l-header__button.blue {
+    background-color: #0072ad;
+  }
+
+  // ハンバーガーメニュー
+  .l-header__icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 24px;
+    justify-content: space-between;
+    width: 32px;
+
+    .line {
+      height: 1px;
+      background: #000;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+  }
+
+  // ハンバーガーメニューがアクティブ
+  .l-header__icon.active {
+    .line:first-of-type {
+      transform: rotate(45deg) translate(10px, 6px);
+    }
+
+    .line:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    .line:last-of-type {
+      transform: rotate(-45deg) translate(10px, -6px);
+    }
+  }
+}
+
+// ハンバーガーメニューが開いた時にスクロールを無効に
+body.menu-open {
+  overflow: hidden;
+}
+
+// spのヘッダーナビ
+.l-header__nav--sp {
+  display: none;
+}
+
+.l-header__nav--sp.active {
+  background-color: #f6fafc;
+  background-size: cover;
+  display: block;
+  height: calc(100vh - 80px);
+  left: 0;
+  margin-top: 79px;
+  padding: 28px 24px 45px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  .l-header__navArea--sp ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .item a {
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+
+      &:before {
+        content: '■';
+        color: #182659;
+        margin-right: 6px;
+      }
+    }
+
+    .l-header__buttonArea--sp {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .l-header__button--sp {
+      align-items: center;
+      color: #fff;
+      display: flex;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 12px 18px;
+
+      img {
+        width: 28px;
+      }
+    }
+
+    .l-header__button--sp.lightblue {
+      background-color: #07c1d0;
+    }
+
+    .l-header__button--sp.blue {
+      background-color: #0072ad;
+    }
+  }
+}

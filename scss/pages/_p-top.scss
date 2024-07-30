@@ -1,0 +1,228 @@
+@use "../global/breakpoint" as m;
+
+// メインビジュアル
+.l-hero {
+  background-image: url("../img/top/main.jpg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  height: calc(100vh - 80px);
+  position: relative;
+  @include m.mq(sp) {
+    height: 300px;
+  }
+
+  .l-hero__text {
+    animation: 2s textFadeUp ease-in-out forwards;
+    color: #FFF;
+    font-size: 3.3vw;
+    font-weight: bold;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    @include m.mq(sp) {
+      font-size: 28px;
+      width: 100%;
+    }
+
+    p {
+      font-size: 1.3vw;
+      text-align: center;
+      margin-top: 1.1vw;
+      @include m.mq(sp) {
+        font-size: 18px;
+        margin-top: 14px;
+      }
+    }
+  }
+}
+
+@keyframes textFadeUp {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// 私たちについて
+.p-top-about {
+  padding: 5.5vw 0;
+  @include m.mq(sp) {
+    padding: 48px 16px;
+  }
+
+  .p-top-about__inner {
+    align-items: center;
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    margin: 2.5vw auto 0;
+    width: 80%;
+    @include m.mq(sp) {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+
+    img {
+      border-radius: 3%;
+      width: 35%;
+      @include m.mq(sp) {
+        width: 100%;
+      }
+    }
+
+    .p-top-about__text {
+      font-size: 1.1vw;
+      @include m.mq(sp) {
+        font-size: 14px;
+      }
+
+      .large {
+        color: #0072ad;
+        font-size: 1.8vw;
+        font-weight: bold;
+        @include m.mq(sp) {
+          font-size: 24px;
+          margin-top: 24px;
+        }
+      }
+
+      p:last-of-type {
+        line-height: 1.7;
+        margin-top: 1.5vw;
+        @include m.mq(sp) {
+          margin-top: 18px;
+        }
+      }
+    }
+  }
+}
+
+// 私たちの強み
+.p-top-strong {
+  background: #f6fafc;
+  padding: 5.5vw 0;
+  @include m.mq(sp) {
+    padding: 48px 16px;
+  }
+
+  .p-top-strong__inner {
+    margin: 2.5vw auto 0;
+    width: 80%;
+    @include m.mq(sp) {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+  .p-top-strong__text {
+    line-height: 2;
+    text-align: center;
+    @include m.mq(sp) {
+      font-size: 14px;
+    }
+  }
+}
+
+// バナー
+.p-top-banner {
+  ul {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 100%;
+    @include m.mq(sp) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      align-items: center;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      height: 29vw;
+      justify-content: center;
+      position: relative;
+      @include m.mq(sp) {
+        height: 290px;
+      }
+
+      &:first-of-type {
+        background-image: url("../img/top/sekou.png");
+      }
+
+      &:last-of-type {
+        background-image: url("../img/top/gyoumu.png");
+      }
+    }
+
+    .p-top-banner__btn {
+      background: #0072AD;
+      border-radius: 28px;
+      color: #fff;
+      display: block;
+      font-size: 1.1vw;
+      font-weight: bold;
+      line-height: 1;
+      padding: 1.3vw 0;
+      text-align: center;
+      width: 20vw;
+      @include m.mq(sp) {
+        font-size: 16px;
+        padding: 12px 0;
+        width: 250px;
+      }
+    }
+  }
+}
+
+// 採用情報
+.p-top-recruit {
+  background-image: url("../img/recruit/recruit_fv.jpg");
+  background-size: 100% 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  padding: 7vw 0;
+  text-align: center;
+
+  @include m.mq(sp) {
+    background-size: cover;
+    padding: 48px 16px;
+  }
+
+  .p-top-recruit__text {
+    font-size: 1vw;
+    line-height: 2.2;
+    margin-top: 2.5vw;
+
+    @include m.mq(sp) {
+      font-size: 14px;
+      margin-top: 32px;
+    }
+  }
+
+  .p-top-recruit__btn {
+    background: #0072AD;
+    border-radius: 200px;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.1vw;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 2.5vw;
+    padding: 1.3vw 0;
+    width: 16.4vw;
+
+    @include m.mq(sp) {
+      font-size: 14px;
+      padding: 12px 0;
+      margin-top: 24px;
+      width: 200px;
+    }
+  }
+}
